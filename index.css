@@ -1,0 +1,10 @@
+.td_class{
+    border: black solid 1px;
+    padding-left:5px;
+    padding-right:5px
+}
+.table_class{
+    border: black solid 1px;
+    border-collapse:collapse;
+    text-align: center;
+}
