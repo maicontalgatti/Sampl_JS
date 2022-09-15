@@ -124,22 +124,61 @@ function IndexOf() {
 
 IndexOf();
 
-function constructor_every() {  
+function constructor_every() {
 
     function pass_grades(item_value, item_index, arr_name) {
         return (item_value >= 70);
     };
-    
+
     var grades = [94, 65, 71, 84, 99];
     var the_result = grades.every(pass_grades);
 
-    window.alert(the_result);
+    document.write("<p>( EVERY() )"+the_result+"</p>");
 
 };
 
 constructor_every();
 
 
+//nested arrays
+function nested() {
 
+    document.write("<p>  NESTED  </p>");
+
+    var students = [["Thomas", 92, 90], ["Roger", 87, 78], ["Amber", 81, 85], ["Jennifer", 99, 100]];
+    var i = 0;
+    var j = 0;
+    for (i = 0; i < students.length; i++) {
+        for (j = 0; j < students[i].length; j++) {
+            if (j === 0) {
+                document.write(students[i][j] + ": ");
+            } else if (j === students[i].length - 1) {
+                document.write(students[i][j] + "<br>");
+            } else {
+                continue;
+            }
+        }
+    }
+
+
+
+    var computer_parts = [["Monitors", "LCD Screens", "Vibrant Colors"],["Motherboards", "Fast"],["Chips", "Pentium", "Very Fast"],["Hard Drives", "100-500 GB", "Fast Reading"],["DVD-ROMs", "Burn CDs", "Burn DVDs", "Listen to both!"],["Cases", "All Sizes", "Choice of Colors"],["Power Supplies", "We can get one for any computer!"]];
+    var i = 0;
+    var j = 0;
+    for (i = 0; i < computer_parts.length; i++) {
+        for (j = 0; j < computer_parts[i].length; j++) {
+            if (j === 0) {
+                document.write(computer_parts[i][j] + ": ");
+            } else if (j === computer_parts[i].length - 1) {
+                document.write(computer_parts[i][j] + "<br>");
+            } else {
+                document.write(computer_parts[i][j] + ", ");
+            }
+        }
+    }
+};
+
+nested();
+ 
 
 
